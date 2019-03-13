@@ -1,0 +1,82 @@
+.tableWrapper {
+  
+}
+.tableContainer {
+  display: block;
+  margin: 1px;
+}
+
+.browseTorrent_table {
+
+}
+
+.browseTorrent_tableRow_top {
+  display: flex;
+  text-align: center;
+}
+.browseTorrent_tableHeader{
+  display: block;
+  margin: 1px;
+  padding: 4px;
+  background-color: #043854;
+}
+.browseTorrent_tableHeader a {
+  font-family: 'Graduate', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.browseTorrent_tableRow {
+  display: flex;
+  text-align: center;
+}
+.browseTorrent_tableData {
+  display: block;
+  margin: 1px;
+  padding: 4px;
+  background-color: #011B28;
+}
+.browseTorrent_tableData a {
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+}
+.hoverUnderline a:hover {
+  text-decoration: underline;
+}
+
+.browseTorrent_tableColumn_category {
+  flex-grow:2;
+  min-width:105px;
+  max-width:105px;
+}
+.browseTorrent_tableColumn_title {
+  flex-grow:10;
+  min-width:100px;
+  padding-left: 8px;
+  text-align: left;
+}
+.browseTorrent_tableColumn_size {
+  flex-grow:2;
+  min-width:108px;
+  max-width:108px;
+}
+.browseTorrent_tableColumn_time {
+  flex-grow:2;
+  min-width:108px;
+  max-width:108px;
+}
+.browseTorrent_tableColumn_uploader {
+  flex-grow:3;
+  min-width:120px;
+  max-width:120px;
+}
+.browseTorrent_tableColumn_seeders {
+  flex-grow:1;
+  min-width:50px;
+  max-width:50px;
+}
+.browseTorrent_tableColumn_leechers {
+  flex-grow:1;
+  min-width:50px;
+  max-width:50px;
+}
