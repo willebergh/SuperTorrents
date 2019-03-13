@@ -1,10 +1,13 @@
 .torrent_list_table {
+  display: block;
+  border: 3px solid #0d5982;
+  border-radius: 5px;
   font-size: 14px;
 }
 .torrent_list_table_row_top, .torrent_list_table_row {
   display: grid;
   grid-template-columns: 22% auto 20%;
-  padding: 2px;
+  padding: 6px;
   text-align: center;
   align-items: center;
 }
@@ -49,7 +52,6 @@
 .table_header_size_seeders_infoColumn {
   display: block;
 }
-
 
 .table_data {
   display: block;
