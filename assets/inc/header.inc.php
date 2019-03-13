@@ -92,4 +92,3 @@
         </div>
       </div>
     </header>
-<?php include_once($welcomeSignINC); ?>

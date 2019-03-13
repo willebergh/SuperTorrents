@@ -2,7 +2,7 @@
   include_once "".$_SERVER['DOCUMENT_ROOT']."/supertorrents/assets/inc/pathVar.inc.php";
   include_once($dbhINC);
   include_once($headerINC);
-
+  include_once($welcomeSignINC);
 ?>
   <style media="screen">.headerNav_liHome a {background-color: #2d98da;}</style>
   <main class="main">
