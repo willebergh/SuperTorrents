@@ -1,24 +1,31 @@
 .main {
   display: block;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
-  background-color: #030c15;
-  border: solid #011B28;
-  border-radius: 5px;
 }
+
+
 /* HOME PAGE */
 
-.frontPageArticleWrapper h5{
-  font-size: 18px;
-  font-weight: bold;
-}
-.frontPageArticle  {
+.homePage_onDisplay  {
   display: block;
-  width: 60%;
-  margin: 0 auto 64px;
-  background-color: #030c15;
-  border: solid #011B28;
-  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 64px;
+}
+.homePage_onDisplay_title {
+  padding: 8px 12px;
+  background-color: #0d5982;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 1px solid #043854;
+}
+.homePage_onDisplay_title h5 {
+  font-size: 18px;
+}
+.homePage_onDisplay_content {
+  background-color: #0d5982;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 /* BROWSE PAGE */
@@ -70,7 +77,7 @@
   .main {
 
   }
-  }
+}
 @media only screen and (min-width: 1024px) {
 
 }
