@@ -22,11 +22,9 @@
 
   echo "
     <main class=\"main\">
-      <div class=\"mainStyle\">
   ";
   include_once($browseTorrent_tableINC);
   echo "
-      </div>
     </main>
   ";
 

@@ -1,82 +1,158 @@
-.tableWrapper {
-  
+.torrent_list_table {
+  font-size: 14px;
 }
-.tableContainer {
-  display: block;
-  margin: 1px;
-}
-
-.browseTorrent_table {
-
-}
-
-.browseTorrent_tableRow_top {
-  display: flex;
+.torrent_list_table_row_top, .torrent_list_table_row {
+  display: grid;
+  grid-template-columns: 22% auto 20%;
+  padding: 2px;
   text-align: center;
+  align-items: center;
 }
-.browseTorrent_tableHeader{
-  display: block;
-  margin: 1px;
-  padding: 4px;
+.torrent_list_table_row_top {
+  background-color: #0d5982 ;
+}
+.torrent_list_table_row:nth-child(odd) {
   background-color: #043854;
 }
-.browseTorrent_tableHeader a {
-  font-family: 'Graduate', sans-serif;
-  font-size: 16px;
-  font-weight: bold;
+.torrent_list_table_row:nth-child(even) {
+  background-color: #022f46;
 }
-
-.browseTorrent_tableRow {
-  display: flex;
-  text-align: center;
-}
-.browseTorrent_tableData {
-  display: block;
-  margin: 1px;
-  padding: 4px;
-  background-color: #011B28;
-}
-.browseTorrent_tableData a {
+.table_header {
+  color: #fff;
   font-size: 14px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Graduate', sans-serif;
 }
-.hoverUnderline a:hover {
-  text-decoration: underline;
+.table_header_category {
+  display: block;
 }
-
-.browseTorrent_tableColumn_category {
-  flex-grow:2;
-  min-width:105px;
-  max-width:105px;
-}
-.browseTorrent_tableColumn_title {
-  flex-grow:10;
-  min-width:100px;
-  padding-left: 8px;
+.table_header_title {
+  display: block;
+  width: 100px;
+  margin-left: 4px;
   text-align: left;
 }
-.browseTorrent_tableColumn_size {
-  flex-grow:2;
-  min-width:108px;
-  max-width:108px;
+.table_header_size {
+  display: none;
 }
-.browseTorrent_tableColumn_time {
-  flex-grow:2;
-  min-width:108px;
-  max-width:108px;
+.table_header_time {
+  display: none;
 }
-.browseTorrent_tableColumn_uploader {
-  flex-grow:3;
-  min-width:120px;
-  max-width:120px;
+.table_header_uploader {
+  display: none;
 }
-.browseTorrent_tableColumn_seeders {
-  flex-grow:1;
-  min-width:50px;
-  max-width:50px;
+.table_header_seeders {
+  display: none;
 }
-.browseTorrent_tableColumn_leechers {
-  flex-grow:1;
-  min-width:50px;
-  max-width:50px;
+.table_header_leechers {
+  display: none;
+}
+.table_header_size_seeders_infoColumn {
+  display: block;
+}
+
+
+.table_data {
+  display: block;
+  word-wrap: break-word;
+  width: auto;
+}
+.table_data a {
+  font-size: 14px;
+}
+.table_data_category {
+  display: block;
+}
+.table_data_title {
+  display: block;
+  margin-left: 4px;
+  text-align: left;
+}
+  .table_data_size {
+  display: none;
+}
+  .table_data_time {
+  display: none;
+}
+  .table_data_uploader {
+  display: none;
+}
+  .table_data_seeders {
+  display: none;
+}
+  .table_data_leechers {
+  display: none;
+}
+  .table_data_size_seeders_infoColumn {
+  display: block;
+}
+@media only screen and (min-width: 375px) {
+
+}
+@media only screen and (min-width: 425px) {
+
+}
+@media only screen and (min-width: 768px) {
+  .torrent_list_table_row_top, .torrent_list_table_row {
+    display: grid;
+    grid-template-columns: 10% auto 10% 12% 14% 6% 6%;
+  }
+  .table_header_category {
+    display: block;
+  }
+  .table_header_title {
+    display: block;
+    margin-left: 4px;
+    text-align: left;
+  }
+  .table_header_size {
+    display: block;
+  }
+  .table_header_time {
+    display: block;
+  }
+  .table_header_uploader {
+    display: block;
+  }
+  .table_header_seeders {
+    display: block;
+  }
+  .table_header_leechers {
+    display: block;
+  }
+  .table_header_size_seeders_infoColumn {
+    display: none;
+  }
+
+  .table_data_category {
+    display: block;
+  }
+  .table_data_title {
+    display: block;
+    margin-left: 4px;
+    text-align: left;
+  }
+  .table_data_size {
+    display: block;
+  }
+  .table_data_time {
+    display: block;
+  }
+  .table_data_uploader {
+    display: block;
+  }
+  .table_data_seeders {
+    display: block;
+  }
+  .table_data_leechers {
+    display: block;
+  }
+  .table_data_size_seeders_infoColumn {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+
+}
+@media only screen and (min-width: 1440px) {
+
 }

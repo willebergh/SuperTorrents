@@ -3,17 +3,16 @@
 
   if ($result->num_rows > 0) {
     echo "
-    <div class=\"tableWrapper\">
-      <div class=\"tableContainer\">
-        <div class=\"browseTorrent_table\">
-          <div class=\"browseTorrent_tableRow_top\">
-            <div class=\"browseTorrent_tableHeader browseTorrent_tableColumn_category\"><a>Category</a></div>
-            <div class=\"browseTorrent_tableHeader browseTorrent_tableColumn_title\"><a>Title</a></div>
-            <div class=\"browseTorrent_tableHeader browseTorrent_tableColumn_size\"><a>Size</a></div>
-            <div class=\"browseTorrent_tableHeader browseTorrent_tableColumn_time\"><a>Time</a></div>
-            <div class=\"browseTorrent_tableHeader browseTorrent_tableColumn_uploader\"><a>Uploader</a></div>
-            <div class=\"browseTorrent_tableHeader browseTorrent_tableColumn_seeders\"><a>Se</a></div>
-            <div class=\"browseTorrent_tableHeader browseTorrent_tableColumn_leechers\"><a>Le</a></div>
+        <div class=\"torrent_list_table\">
+          <div class=\"torrent_list_table_row_top\">
+            <div class=\"table_header table_header_category\">category</div>
+            <div class=\"table_header table_header_title\">title</div>
+            <div class=\"table_header table_header_size\">size</div>
+            <div class=\"table_header table_header_time\">time</div>
+            <div class=\"table_header table_header_uploader\">uploader</div>
+            <div class=\"table_header table_header_seeders\">se</div>
+            <div class=\"table_header table_header_leechers\">le</div>
+            <div class=\"table_header table_header_size_seeders_infoColumn\"><div>info</div></div>
           </div>
     ";
     while($row = $result->fetch_assoc()) {
@@ -25,14 +24,18 @@
       }
 
       echo "
-      <div class=\"browseTorrent_tableRow\">
-        <div class=\"browseTorrent_tableData hoverUnderline browseTorrent_tableColumn_category\"><a href=\"$categories_PageURL?a=".$row["category"]."\">"; echo ucfirst($row["category"]); echo "</a></div>
-        <div class=\"browseTorrent_tableData hoverUnderline browseTorrent_tableColumn_title\"><a href=\"$torrentView_PageURL?a=".$row["uuid"]."\">".$row["title"]."</a></div>
-        <div class=\"browseTorrent_tableData browseTorrent_tableColumn_size\"><a>".$row["size"]."</a></div>
-        <div class=\"browseTorrent_tableData browseTorrent_tableColumn_time\"><a>$time</a></div>
-        <div class=\"browseTorrent_tableData hoverUnderline browseTorrent_tableColumn_uploader\"><a href=\"".$row["uploader"]."\">".$row["uploader"]."</a></div>
-        <div class=\"browseTorrent_tableData browseTorrent_tableColumn_seeders\"><a>".$row["seeders"]."</a></div>
-        <div class=\"browseTorrent_tableData browseTorrent_tableColumn_leechers\"><a>".$row["leechers"]."</a></div>
+      <div class=\"torrent_list_table_row\">
+        <div class=\"table_data table_data_category\"><a href=\"$categories_PageURL?a=".$row["category"]."\">"; echo ucfirst($row["category"]); echo "</a></div>
+        <div class=\"table_data table_data_title\"><a href=\"$torrentView_PageURL?a=".$row["uuid"]."\">".$row["title"]."</a></div>
+        <div class=\"table_data table_data_size\"><a>".$row["size"]."</a></div>
+        <div class=\"table_data table_data_time\"><a>$time</a></div>
+        <div class=\"table_data table_data_uploader\"><a href=\"".$row["uploader"]."\">".$row["uploader"]."</a></div>
+        <div class=\"table_data table_data_seeders\"><a>".$row["seeders"]."</a></div>
+        <div class=\"table_data table_data_leechers\"><a>".$row["leechers"]."</a></div>
+        <div class=\"table_data table_data_size_seeders_infoColumn\">
+          <div><a>".$row["seeders"]."</a></div>
+          <div><a>".$row["size"]."</a></div>
+        </div>
       </div>
       ";
     }

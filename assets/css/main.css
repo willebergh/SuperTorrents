@@ -1,9 +1,6 @@
 .main {
-
-}
-.mainStyle {
   display: block;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
   background-color: #030c15;
   border: solid #011B28;
@@ -68,4 +65,12 @@
   margin: 23px;
   padding: 4px;
   text-decoration: underline;
+}
+@media only screen and (min-width: 768px) {
+  .main {
+
+  }
+  }
+@media only screen and (min-width: 1024px) {
+
 }

@@ -4,9 +4,8 @@
   include_once($dbhINC);
 
   echo "
-  <style media=\"screen\">.headerNav_liBrowse{background-color: #2d98da;}</style>
-  <main class=\"main\">
-    <div class=\"mainStyle\">
+    <style media=\"screen\">.headerNav_liBrowse{background-color: #2d98da;}</style>
+    <main class=\"main\">
   ";
 
       $sql = "SELECT DISTINCT category FROM torrents ORDER BY category ASC";
@@ -46,8 +45,7 @@
       };
 
   echo "
-    </div>
-  </main>
+    </main>
   ";
 
   include_once($footerINC);

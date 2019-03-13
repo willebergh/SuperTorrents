@@ -20,12 +20,14 @@
   <body style="<?php echo "background-image:url($asset_content/img/bg.png);" ?>">
     <header class="header">
       <script>
-        function open_side_menu() {
+        function toggleOPEN() {
           document.getElementById("mobile_side_menu").style.width = "100%";
+          document.getElementById("mobile_bottom_nav_menuBtn").setAttribute( "onClick", "toggleCLOSE();" );
         }
 
-        function close_side_menu() {
+        function toggleCLOSE() {
           document.getElementById("mobile_side_menu").style.width = "0";
+          document.getElementById("mobile_bottom_nav_menuBtn").setAttribute( "onClick", "toggleOPEN();" );
         }
     </script>
       <div class="logo">
@@ -53,33 +55,37 @@
       </div>
       <div class="header_searchBarWrapper">
         <form class="header_searchBar" method="post">
-          <input type="text" name="search" placeholder="Search torrents...">
+          <input id="searchBar_input" type="text" name="search" placeholder="Search torrents...">
           <button type="submit" name="button">Go</button>
         </form>
       </div>
       <div id="mobile_side_menu" class="mobile-side-menu">
-        <a href="javascript:void(0)" class="fas fa-times mobile-side-menu-closeBtn" onclick="close_side_menu()"></a>
+        <a href="javascript:void(0)" class="fas fa-times mobile-side-menu-closeBtn" onclick="toggleCLOSE()"></a>
           <div class="mobile-side-menu-container">
-            <a class="mobile-side-menu-item" href=\"$home_PageURL\">Home</a>
-            <a class="mobile-side-menu-item" href=\"$browse_PageURL\">Browse</a>
-            <a class="mobile-side-menu-item" href=\"$recent_PageURL\">Recent</a>
-            <a class="mobile-side-menu-item" href=\"$toplist_PageURL\">Top 100</a>
-            <a class="mobile-side-menu-item" href=\"$categories_PageURL?a=movies\">Movies</a>
-            <a class="mobile-side-menu-item" href=\"$categories_PageURL?a=tv-shows\">Tv-shows</a>
+            <?php
+              echo "
+              <a class=\"mobile-side-menu-item\" href=\"$home_PageURL\">Home</a>
+              <a class=\"mobile-side-menu-item\" href=\"$browse_PageURL\">Browse</a>
+              <a class=\"mobile-side-menu-item\" href=\"$recent_PageURL\">Recent</a>
+              <a class=\"mobile-side-menu-item\" href=\"$toplist_PageURL\">Top 100</a>
+              <a class=\"mobile-side-menu-item\" href=\"$categories_PageURL?a=movies\">Movies</a>
+              <a class=\"mobile-side-menu-item\" href=\"$categories_PageURL?a=tv-shows\">Tv-shows</a>
+              "
+            ?>
           </div>
       </div>
       </div>
       <div class="mobile-bottom-nav">
         <div class="mobile-bottom-nav-item-container">
-          <a href="javascript:void(0)" class="mobile-bottom-nav-item menu" onclick="open_side_menu()">
+          <a href="javascript:void(0)" id="mobile_bottom_nav_menuBtn" class="mobile-bottom-nav-item menu" onclick="toggleOPEN()">
             <span class="mobile-bottom-nav-item-icon fas fa-bars"></span>
             <span class="mobile-bottom-nav-item-text">Menu</span>
           </a>
-          <a href="" class="mobile-bottom-nav-item search">
+          <a href="javascript:document.getElementById('searchBar_input').focus()" class="mobile-bottom-nav-item search">
             <span class="mobile-bottom-nav-item-icon fas fa-search"></span>
             <span class="mobile-bottom-nav-item-text">Search</span>
           </a>
-          <a href="" class="mobile-bottom-nav-item login">
+          <?php echo "<a href=\"$login_PageURL\" class=\"mobile-bottom-nav-item login\">"; ?>
             <span class="mobile-bottom-nav-item-icon fas fa-user"></span>
             <span class="mobile-bottom-nav-item-text">Login</span>
           </a>

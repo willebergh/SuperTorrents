@@ -113,20 +113,17 @@
      text-align: center;
      align-items: center;
      height: 50px;
-     background-color: #030c15;
+     background-color: #0d5982;
    }
    .mobile-bottom-nav-item.menu {
-     border-right: 1px solid #0d5982;
-     border-top: 2px solid #0d5982;
+     border-right: 1px solid #043854;
    }
    .mobile-bottom-nav-item.search {
-     border-left: 1px solid #0d5982;
-     border-right: 1px solid #0d5982;
-     border-top: 2px solid #0d5982;
+     border-left: 1px solid #043854;
+     border-right: 1px solid #043854;
    }
    .mobile-bottom-nav-item.login {
-     border-left: 1px solid #0d5982;
-     border-top: 2px solid #0d5982;
+     border-left: 1px solid #043854;
    }
    .mobile-bottom-nav-item a {
      display: block;
@@ -171,7 +168,7 @@
     display: block;
     width: 507px;
     height: 38px;
-    margin: 5px auto;
+    margin: 9px auto 0;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
