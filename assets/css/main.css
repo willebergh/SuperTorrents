@@ -83,25 +83,57 @@
   width: 100%;
   margin: 0 auto;
   padding: 0;
-  grid-gap: 10px;
 }
 
 .torrentViewer_title {
   grid-column: 1 / span 2;
+  margin-top: 24px;
+  padding: 4px 6px 6px;
+  background-color: #0d5982;
+}
+.torrentViewer_title h1, .torrentViewer_description h1 {
+  font-size: 18px;
 }
 
+.torrentViewer_info_spacer {
+  grid-column: 1 / span 2;
+  width: 100%;
+  height: 5px;
+  background-color: #0d5982;
+}
 .torrentViewer_info {
-  background-color: #043854;
+  grid-column: 1 / span 2;
+  padding: 4px 0;
+  background-color: #011B28;
 }
 .torrentViewer_info_item {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: #011B28;
+  width: 100%;
+  padding: 4px 0 4px 32px;
+  grid-template-columns: 120px 16px auto;
 }
+.torrentViewer_info_item a {
+  font-size: 14px;
+}
+
 
 .torrentViewer_description {
   grid-column: 1 / span 2;
+  margin-top: 24px;
+  background-color: #0d5982;
 }
+.torrentViewer_description h1 {
+  font-size: 18px;
+  padding: 4px 6px 6px;
+}
+.torrentViewer_description_p_container {
+  padding: 8px;
+  background-color: #011B28;
+}
+.torrentViewer_description p {
+  font-size: 14px;
+}
+
 @media only screen and (min-width: 768px) {
   .main {
 

@@ -25,42 +25,54 @@
     </div>
     <div class="torrentViewer_info">
       <div class="torrentViewer_info_item">
-        <a>Category:</a>
-        <a href="#">Games</a>
+        <div><a>Category</a></div>
+        <div><a>:</a></div>
+        <div><a href="#">Games</a></div>
       </div>
       <div class="torrentViewer_info_item">
-        <a>Files:</a>
-        <a href="#">3</a>
+        <div><a>Files</a></div>
+        <div><a>:</a></div>
+        <div><a href="#">3</a></div>
       </div>
       <div class="torrentViewer_info_item">
-        <a>Total Size:</a>
-        <a href="#">12 GB</a>
+        <div><a>Total Size</a></div>
+        <div><a>:</a></div>
+        <div><a href="#">12 GB</a></div>
       </div>
       <div class="torrentViewer_info_item">
-        <a>Upload Date:</a>
-        <a href="#">2019-03-14</a>
+        <div><a>Upload Date</a></div>
+        <div><a>:</a></div>
+        <div><a href="#">2019-03-14</a></div>
       </div>
     </div>
+    <span class="torrentViewer_info_spacer"></span>
     <div class="torrentViewer_info">
       <div class="torrentViewer_info_item">
-        <a>Seeders:</a>
-        <a href="#">324</a>
+        <div><a>Seeders</a></div>
+        <div><a>:</a></div>
+        <div><a href="#">324</a></div>
       </div>
       <div class="torrentViewer_info_item">
-        <a>Leechers:</a>
-        <a href="#">39</a>
+        <div><a>Leechers</a></div>
+        <div><a>:</a></div>
+        <div><a href="#">39</a></div>
       </div>
       <div class="torrentViewer_info_item">
-        <a>Downloads:</a>
-        <a href="#">64</a>
+        <div><a>Downloads</a></div>
+        <div><a>:</a></div>
+        <div><a href="#">64</a></div>
       </div>
       <div class="torrentViewer_info_item">
-        <a>Uploaded By:</a>
-        <a href="#">BERGET</a>
+        <div><a>Uploaded By</a></div>
+        <div><a>:</a></div>
+        <div><a href="#">BERGET</a></div>
       </div>
     </div>
     <div class="torrentViewer_description">
-      <p>alksjdlka askdj asa skdjaskljdas asjd kajsdaskdja</p>
+      <h1>Description</h1>
+      <div class="torrentViewer_description_p_container">
+        <p>alksjdlka askdj asa skdjaskljdas asjd kajsdaskdja</p>
+      </div>
     </div>
   </div>
 </main>
