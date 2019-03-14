@@ -73,6 +73,35 @@
   padding: 4px;
   text-decoration: underline;
 }
+
+/* Torrent View */
+
+.torrentViewer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  grid-gap: 10px;
+}
+
+.torrentViewer_title {
+  grid-column: 1 / span 2;
+}
+
+.torrentViewer_info {
+  background-color: #043854;
+}
+.torrentViewer_info_item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #011B28;
+}
+
+.torrentViewer_description {
+  grid-column: 1 / span 2;
+}
 @media only screen and (min-width: 768px) {
   .main {
 
