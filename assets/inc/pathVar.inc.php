@@ -13,6 +13,7 @@
   $headerCSS = "$webRoot/assets/css/header.css";
   $mainCSS = "$webRoot/assets/css/main.css";
   $welcomeSignCSS = "$webRoot/assets/css/welcomeSign.css";
+  $user_loginCSS = "$webRoot/assets/css/user_login.css";
 
   $browseTorrent_tableINC = "$globalRoot/assets/inc/browseTorrent_table.inc.php";
   $dbhINC = "$globalRoot/assets/inc/dbh.inc.php";
