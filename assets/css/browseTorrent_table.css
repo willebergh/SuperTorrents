@@ -6,7 +6,7 @@
 }
 .torrent_list_table_row_top, .torrent_list_table_row {
   display: grid;
-  grid-template-columns: 22% auto 20%;
+  grid-template-columns: 22% 58% 20%;
   padding: 6px;
   text-align: center;
   align-items: center;
@@ -33,6 +33,7 @@
   width: 100px;
   margin-left: 4px;
   text-align: left;
+  word-wrap: break-word;
 }
 .table_header_size {
   display: none;
