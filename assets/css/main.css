@@ -134,6 +134,63 @@
   font-size: 14px;
 }
 
+
+.formContainer {
+  display: block;
+  width: 100%;
+  margin-top: 10%;
+  background-color: #011B28;
+}
+.formContainer h1 {
+  padding: 4px 0;
+  font-size: 32px;
+  text-align: center;
+  background-color: #0d5982;
+}
+.form {
+
+}
+.form label {
+  display: block;
+  width: auto;
+  padding: 8px;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+}
+.form input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  color: #fff;
+  font-size: 16px;
+  border: 1px solid #0d5982;
+  background-color: #030c15;
+}
+
+.form_username, .form_password {
+  width: 250px;
+  margin: 32px auto 0;
+}
+.form_extra_links {
+  width: 250px;
+  margin: 16px auto 0;
+}
+.form_button {
+  width: 80px;
+  margin: auto;
+  padding: 32px 0;
+}
+.form button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  background-color: #0d5982;
+}
+
 @media only screen and (min-width: 768px) {
   .main {
 
