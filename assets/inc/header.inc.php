@@ -55,9 +55,9 @@
         </ul>
       </div>
       <div class="header_searchBarWrapper">
-        <form class="header_searchBar" method="post">
+        <form class="header_searchBar" action="/supertorrents/assets/script/search.script.php" method="get">
           <input id="searchBar_input" type="text" name="search" placeholder="Search torrents...">
-          <button type="submit" name="button">Go</button>
+          <button type="submit" name="">Go</button>
         </form>
       </div>
       <div id="mobile_side_menu" class="mobile-side-menu">

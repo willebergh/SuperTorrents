@@ -45,7 +45,7 @@
     border-bottom-right-radius: 0;
   	background-color: #030c15;
   }
-  .header_searchBar button[name=button] {
+  .header_searchBar button[type=submit] {
     display: block;
     width: 37px;
     height: 37px;
@@ -62,7 +62,7 @@
     border-bottom-left-radius: 0;
   	background-color: #030c15;
   }
-  
+
   .mobile-side-menu  {
     width: 0;
     height: 100%;

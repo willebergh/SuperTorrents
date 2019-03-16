@@ -5,7 +5,6 @@
   $webRoot = "$projectRoot";
 
   $asset_content = "$webRoot/assets/content";
-  $menu_buttonICON = "$webRoot/assets/content/icons/menu-button.png";
 
   $browseTorrent_tableCSS = "$webRoot/assets/css/browseTorrent_table.css";
   $footerCSS = "$webRoot/assets/css/footer.css";
@@ -20,6 +19,8 @@
   $footerINC = "$globalRoot/assets/inc/footer.inc.php";
   $headerINC = "$globalRoot/assets/inc/header.inc.php";
   $welcomeSignINC = "$globalRoot/assets/inc/welcomeSign.inc.php";
+
+  $searchSCRIPT = "$webRoot/search/searchViewer.php";
 
   $home_PageURL = "$webRoot/home/";
   $browse_PageURL = "$webRoot/browse/";

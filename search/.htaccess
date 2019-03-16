@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^([^/\.]+)?$ searchViewer.php?search=$1 [L]
