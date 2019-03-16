@@ -3,11 +3,6 @@
   include_once($headerINC);
   include_once($dbhINC);
 
-
-  if (isset($_POST)) {
-    $search_query = $_GET['search'];
-  }
-
   $sql = "SELECT * FROM torrents WHERE title LIKE '%$search_query%' OR uploader LIKE '%$search_query%'";
 
   echo "

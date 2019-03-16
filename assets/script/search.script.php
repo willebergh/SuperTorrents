@@ -4,6 +4,7 @@
   if (isset($_POST)) {
     $search_query = $_GET['search'];
   }
+  
   if ($search_query == "") {
     header("Location: $webRoot/");
   } else {
