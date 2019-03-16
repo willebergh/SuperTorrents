@@ -37,7 +37,7 @@
       <div class="search">
         <form class="search_form" action="./assets/script/search.script.php" method="get">
           <input type="text" name="search" placeholder="Search torrents...">
-          <button type="submit" name="button"><span class="mobile-bottom-nav-item-icon fas fa-search"></span></button>
+          <button type="submit" name="button"><span class="fas fa-search"></span></button>
         </form>
       </div>
       <div class="links">
