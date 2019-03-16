@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(/supertorrents/assets/content/img/bg.png);
+}
+h1, h2, h3 {
+  font-family: 'Graduate', sans-serif;
+  font-weight: 400;
+	color: #ffffff;
+}
+li, p, a {
+	font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+	text-decoration: none;
+	list-style: none;
+  font-size: 14px
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+}
+
+.slogan {
+  text-align: center;
+}
+.logo {
+  width: 100%;
+  text-align: center;
+}
+.logo h1 {
+  font-size: 32px;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.search {
+
+}
+.search_form {
+  display: grid;
+  grid-template-columns: auto 37px;
+  width: 100%;
+  border: 2px solid #0d5982;
+}
+.search_form input[name=search] {
+  display: block;
+  height: 37px;
+  padding: 0 8px;
+  background-color: #030c15;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+}
+.search button[name=button] {
+  display: block;
+  width: 37px;
+  height: 37px;
+  background-color: #030c15;
+  border: none;
+  color: #fff;
+}
+
+
+.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.donation {
+  text-align: center;
+}
+.donation h3, .donation p {
+  display: inline-block;
+  font-size: 14px
+}
+@media only screen and (min-width: 375px) {
+
+}
+@media only screen and (min-width: 425px) {
+
+}
+@media only screen and (min-width: 768px) {
+
+}
+@media only screen and (min-width: 1024px) {
+
+}
