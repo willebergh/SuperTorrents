@@ -90,6 +90,7 @@
   margin-top: 24px;
   padding: 4px 6px 6px;
   background-color: #0d5982;
+  word-wrap: break-word;
 }
 .torrentViewer_title h1 {
   font-size: 18px;
@@ -116,7 +117,6 @@
   font-size: 14px;
 }
 
-
 .torrentViewer_description {
   grid-column: 1 / span 2;
   margin-top: 24px;
@@ -136,9 +136,24 @@
 
 @media only screen and (min-width: 768px) {
   .main {
-
+    max-width: 900px;
+  }
+  .torrentViewer_info_left {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1
+  }
+  .torrentViewer_info_right {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1
+  }
+  .torrentViewer_info_spacer {
+    display: none;
   }
 }
 @media only screen and (min-width: 1024px) {
-
+  .main {
+    width: 70%;
+    min-width: 900px;
+    max-width: 70%;
+  }
 }

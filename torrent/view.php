@@ -21,7 +21,7 @@
         <div class=\"torrentViewer_title\">
           <h1>".$row["title"]."</h1>
         </div>
-        <div class=\"torrentViewer_info\">
+        <div class=\"torrentViewer_info torrentViewer_info_left\">
           <div class=\"torrentViewer_info_item\">
             <div><a>Category</a></div>
             <div><a>:</a></div>
@@ -44,7 +44,7 @@
           </div>
         </div>
         <span class=\"torrentViewer_info_spacer\"></span>
-        <div class=\"torrentViewer_info\">
+        <div class=\"torrentViewer_info torrentViewer_info_right\">
           <div class=\"torrentViewer_info_item\">
             <div><a>Seeders</a></div>
             <div><a>:</a></div>
