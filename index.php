@@ -1,5 +1,5 @@
 <?php
-  #header("Location: ./home/");
+  include_once "".$_SERVER['DOCUMENT_ROOT']."/supertorrents/assets/inc/pathVar.inc.php";
 ?>
 
 <!DOCTYPE html>
@@ -14,24 +14,28 @@
 		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
-  <body>
+  <body scroll="no">
     <main class="main">
       <div class="slogan">
-        <p>Fast, Secure and Anonymous Torrents</br>based on the Blockchain technology and Tor network.</p>
+        <p>Fast, Secure and Anonymous Torrents based</br>on the Blockchain technology and Tor network.</p>
       </div>
       <div class="logo">
         <h1>Supertorrents.to</h1>
       </div>
       <div class="nav">
-        <div><a href="#">Home</a></div>
-        <div><a href="#">Browse</a></div>
-        <div><a href="#">Recent</a></div>
-        <div><a href="#">Top 100</a></div>
-        <div><a href="#">Movies</a></div>
-        <div><a href="#">Tv-shows</a></div>
+        <?php
+          echo "
+          <div><a href=\"$home_PageURL\">Home</a></div>
+          <div><a href=\"$browse_PageURL\">Browse</a></div>
+          <div><a href=\"$recent_PageURL\">Recent</a></div>
+          <div><a href=\"$toplist_PageURL\">Top 100</a></div>
+          <div class=\"hide_mobile\"><a href=\"$torrentView_PageURL?a=movies\">Movies</a></div>
+          <div class=\"hide_mobile\"><a href=\"$torrentView_PageURL?a=tv-shows\">Tv-shows</a></div>
+          ";
+        ?>
       </div>
       <div class="search">
-        <form class="search_form">
+        <form class="search_form" action="./assets/script/search.script.php" method="get">
           <input type="text" name="search" placeholder="Search torrents...">
           <button type="submit" name="button"><span class="mobile-bottom-nav-item-icon fas fa-search"></span></button>
         </form>
