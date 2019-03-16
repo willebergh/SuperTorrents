@@ -1,149 +1,139 @@
-@media only screen and (min-width: 320px) {
-  .header {
-    display: block;
-    width: 100%;
-  }
-  .logo {
-    display: block;
-    margin-bottom: 8px;
-    padding: 8px 0;
-    background-color: #0d5982;
-  }
-  .logo h1 {
-    display: block;
-    font-size: 32px;
-    text-align: center;
-  }
-  .navWrapper {
-    display: none;
-  }
-  .header_searchBarWrapper {
-    display: block;
-    width: 80%;
-    max-width: 340px;
-    margin: 0 auto;
-  }
-  .header_searchBar {
-    display: grid;
-    grid-template-columns: auto 37px;
-    margin-bottom: 8px;
-  }
-  .header_searchBar input[name=search] {
-    display: block;
-    width: 100%;
-    height: 37px;
-    margin: 0;
-    padding: 0 8px;
-    font-size: 16px;
-  	font-family: 'Raleway', sans-serif;
-  	color: #FFFFFF;
-  	border-radius: 1px;
-  	border-color: #0d5982;
-  	border-style: solid;
-    border-right-style: none;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  	background-color: #030c15;
-  }
-  .header_searchBar button[type=submit] {
-    display: block;
-    width: 37px;
-    height: 37px;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-  	font-family: 'Raleway', sans-serif;
-  	color: #FFFFFF;
-    border-radius: 1px;
-  	border-color: #0d5982;
-  	border-style: solid;
-    border-left-style: none;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  	background-color: #030c15;
-  }
-
-  .mobile-side-menu  {
-    width: 0;
-    height: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    overflow-x: hidden;
-    transition: 0.5s;
-  }
-  .mobile-side-menu-closeBtn {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-  }
-  .mobile-side-menu-container {
-    display: block;
-    margin: 100px auto 0;
-  }
-  .mobile-side-menu-item {
-    display: block;
-    width: 150px;
-    margin: auto;
-    padding: 8px 0;
-    font-size: 24px;
-    text-align: center;
-    font-family: 'Graduate', sans-serif;
-    overflow: hidden;
-  }
-
-  .mobile-bottom-nav {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 100;
-  }
-  .mobile-bottom-nav-item-container {
-    display: grid;
-    grid-template-columns: 33.3% auto 33.3%;
-  }
-   .mobile-bottom-nav-item {
-     display: block;
-     color: #fff;
-     text-align: center;
-     align-items: center;
-     height: 50px;
-     background-color: #0d5982;
-   }
-   .mobile-bottom-nav-item.menu {
-     border-right: 1px solid #043854;
-   }
-   .mobile-bottom-nav-item.search {
-     border-left: 1px solid #043854;
-     border-right: 1px solid #043854;
-   }
-   .mobile-bottom-nav-item.login {
-     border-left: 1px solid #043854;
-   }
-   .mobile-bottom-nav-item a {
-     display: block;
-     width: 100%;
-     height: 100%;
-   }
-   .mobile-bottom-nav-item-icon {
-     margin-top: 8px;
-   }
-   .mobile-bottom-nav-item-text {
-     display: block;
-   }
+.header {
+  display: block;
+  width: 100%;
 }
-@media only screen and (min-width: 375px) {
-
+.logo {
+  display: block;
+  margin-bottom: 8px;
+  padding: 8px 0;
+  background-color: #0d5982;
 }
-@media only screen and (min-width: 425px) {
-
+.logo h1 {
+  display: block;
+  font-size: 32px;
+  text-align: center;
 }
-@media only screen and (min-width: 768px) {
-
+.navWrapper {
+  display: none;
 }
+.header_searchBarWrapper {
+  display: block;
+  width: 80%;
+  max-width: 340px;
+  margin: 0 auto;
+}
+.header_searchBar {
+  display: grid;
+  grid-template-columns: auto 37px;
+  margin-bottom: 8px;
+}
+.header_searchBar input[name=search] {
+  display: block;
+  width: 100%;
+  height: 37px;
+  margin: 0;
+  padding: 0 8px;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  color: #FFFFFF;
+  border-radius: 1px;
+  border-color: #0d5982;
+  border-style: solid;
+  border-right-style: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #030c15;
+}
+.header_searchBar button[type=submit] {
+  display: block;
+  width: 37px;
+  height: 37px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  color: #FFFFFF;
+  border-radius: 1px;
+  border-color: #0d5982;
+  border-style: solid;
+  border-left-style: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #030c15;
+}
+
+.mobile-side-menu  {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.mobile-side-menu-closeBtn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+.mobile-side-menu-container {
+  display: block;
+  margin: 100px auto 0;
+}
+.mobile-side-menu-item {
+  display: block;
+  width: 150px;
+  margin: auto;
+  padding: 8px 0;
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Graduate', sans-serif;
+  overflow: hidden;
+}
+
+.mobile-bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.mobile-bottom-nav-item-container {
+  display: grid;
+  grid-template-columns: 33.3% auto 33.3%;
+}
+ .mobile-bottom-nav-item {
+   display: block;
+   color: #fff;
+   text-align: center;
+   align-items: center;
+   height: 50px;
+   background-color: #0d5982;
+ }
+ .mobile-bottom-nav-item.menu {
+   border-right: 1px solid #043854;
+ }
+ .mobile-bottom-nav-item.search {
+   border-left: 1px solid #043854;
+   border-right: 1px solid #043854;
+ }
+ .mobile-bottom-nav-item.login {
+   border-left: 1px solid #043854;
+ }
+ .mobile-bottom-nav-item a {
+   display: block;
+   width: 100%;
+   height: 100%;
+ }
+ .mobile-bottom-nav-item-icon {
+   margin-top: 8px;
+ }
+ .mobile-bottom-nav-item-text {
+   display: block;
+ }
+
 @media only screen and (min-width: 1024px) {
 
   .header {
