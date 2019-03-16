@@ -9,7 +9,16 @@
   }
 
   $sql = "SELECT * FROM torrents WHERE title LIKE '%$search_query%' OR uploader LIKE '%$search_query%'";
+
+  echo "
+    <main class=\"main\">
+  ";
+
   include_once($browseTorrent_tableINC);
+
+  echo "
+    </main>
+  ";
 
 
   include_once($footerINC);
