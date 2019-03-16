@@ -11,7 +11,12 @@
       echo "<link rel=\"stylesheet\" href=\"$browseTorrent_tableCSS\" type=\"text/css\">";
       echo "<link rel=\"stylesheet\" href=\"$footerCSS\" type=\"text/css\">";
       echo "<link rel=\"stylesheet\" href=\"$welcomeSignCSS\" type=\"text/css\">";
-      echo "<link rel=\"stylesheet\" href=\"$webRoot/assets/css/page_uuid_css/$page_uuid_css\" type=\"text/css\">";
+
+      if (isset($page_uuid_css)) {
+        echo "<link rel=\"stylesheet\" href=\"$webRoot/assets/css/page_uuid_css/$page_uuid_css\" type=\"text/css\">";
+      } else {
+        $page_uuid_css = "none";
+      }
     ?>
     <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet"/>
 		<link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet"/>
