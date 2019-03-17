@@ -1,6 +1,5 @@
 .torrent_list_table {
   display: block;
-  border: 3px solid #0d5982;
   border-radius: 5px;
   font-size: 14px;
 }
@@ -15,10 +14,10 @@
   background-color: #0d5982 ;
 }
 .torrent_list_table_row:nth-child(odd) {
-  background-color: #043854;
+  background-color: rgb(1, 27, 40, 0.6);
 }
 .torrent_list_table_row:nth-child(even) {
-  background-color: #022f46;
+  background-color: rgb(1, 24, 35, 0.6);
 }
 .table_header {
   color: #fff;

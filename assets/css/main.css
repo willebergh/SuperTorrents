@@ -15,17 +15,13 @@
 .homePage_onDisplay_title {
   padding: 8px 12px;
   background-color: #0d5982;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   border-bottom: 1px solid #043854;
 }
 .homePage_onDisplay_title h5 {
   font-size: 18px;
 }
 .homePage_onDisplay_content {
-  background-color: #0d5982;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  
 }
 
 /* BROWSE PAGE */
@@ -105,7 +101,7 @@
 .torrentViewer_info {
   grid-column: 1 / span 2;
   padding: 4px 0;
-  background-color: #011B28;
+  background-color: rgb(1, 27, 40, 0.6);
 }
 .torrentViewer_info_item {
   display: grid;
@@ -120,15 +116,15 @@
 .torrentViewer_description {
   grid-column: 1 / span 2;
   margin-top: 24px;
-  background-color: #0d5982;
+  background-color: rgb(1, 27, 40, 0.6);
 }
 .torrentViewer_description h1 {
   font-size: 18px;
   padding: 4px 6px 6px;
+  background-color: #0d5982;
 }
 .torrentViewer_description_p_container {
   padding: 8px;
-  background-color: #011B28;
 }
 .torrentViewer_description p {
   font-size: 14px;
