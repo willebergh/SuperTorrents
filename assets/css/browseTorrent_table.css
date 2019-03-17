@@ -14,10 +14,10 @@
   background-color: #0d5982 ;
 }
 .torrent_list_table_row:nth-child(odd) {
-  background-color: rgb(1, 27, 40, 0.6);
+  background-color: rgba(1, 27, 40, 0.6);
 }
 .torrent_list_table_row:nth-child(even) {
-  background-color: rgb(1, 24, 35, 0.6);
+  background-color: rgba(1, 24, 35, 0.6);
 }
 .table_header {
   color: #fff;
