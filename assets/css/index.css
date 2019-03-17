@@ -30,11 +30,15 @@ li, p, a {
   height: 100%;
   margin: auto;
 }
-
+.section_one {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .slogan {
   display: block;
   width: 100%;
-  margin-top: 25%;
   text-align: center;
 }
 .slogan p {
@@ -155,7 +159,4 @@ li, p, a {
   .hide_mobile {
     display: block;
   }
-}
-@media only screen and (min-width: 1024px) {
-
 }

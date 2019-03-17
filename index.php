@@ -16,34 +16,36 @@
   </head>
   <body scroll="no">
     <main class="main">
-      <div class="slogan">
-        <p>Fast, Secure and Anonymous Torrents based</br>on the Blockchain technology and Tor network.</p>
-      </div>
-      <div class="logo">
-        <h1>Supertorrents.to</h1>
-      </div>
-      <div class="nav">
-        <?php
-          echo "
-          <div><a href=\"$home_PageURL\">Home</a></div>
-          <div><a href=\"$browse_PageURL\">Browse</a></div>
-          <div><a href=\"$recent_PageURL\">Recent</a></div>
-          <div><a href=\"$toplist_PageURL\">Top 100</a></div>
-          <div class=\"hide_mobile\"><a href=\"$torrentView_PageURL?a=movies\">Movies</a></div>
-          <div class=\"hide_mobile\"><a href=\"$torrentView_PageURL?a=tv-shows\">Tv-shows</a></div>
-          ";
-        ?>
-      </div>
-      <div class="search">
-        <form class="search_form" action="./assets/script/search.script.php" method="get">
-          <input type="text" name="search" placeholder="Search torrents...">
-          <button type="submit" name="button"><span class="fas fa-search"></span></button>
-        </form>
-      </div>
-      <div class="links">
-        <div><a href="#">Tor Project</a></div>
-        <div><a href="#">About this website</a></div>
-        <div><a href="#">Blockchain</a></div>
+      <div class="section_one">
+        <div class="slogan">
+          <p>Fast, Secure and Anonymous Torrents based</br>on the Blockchain technology and Tor network.</p>
+        </div>
+        <div class="logo">
+          <h1>Supertorrents.to</h1>
+        </div>
+        <div class="nav">
+          <?php
+            echo "
+            <div><a href=\"$home_PageURL\">Home</a></div>
+            <div><a href=\"$browse_PageURL\">Browse</a></div>
+            <div><a href=\"$recent_PageURL\">Recent</a></div>
+            <div><a href=\"$toplist_PageURL\">Top 100</a></div>
+            <div class=\"hide_mobile\"><a href=\"$torrentView_PageURL?a=movies\">Movies</a></div>
+            <div class=\"hide_mobile\"><a href=\"$torrentView_PageURL?a=tv-shows\">Tv-shows</a></div>
+            ";
+          ?>
+        </div>
+        <div class="search">
+          <form class="search_form" action="./assets/script/search.script.php" method="get">
+            <input type="text" name="search" placeholder="Search torrents...">
+            <button type="submit" name="button"><span class="fas fa-search"></span></button>
+          </form>
+        </div>
+        <div class="links">
+          <div><a href="#">Tor Project</a></div>
+          <div><a href="#">About this website</a></div>
+          <div><a href="#">Blockchain</a></div>
+        </div>
       </div>
       <div class="donation">
         <div class="donation_title"><h2>Donation Addresses</h2></div>
