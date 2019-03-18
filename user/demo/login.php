@@ -1,6 +1,14 @@
+<?php
+  session_start();
+
+  if ($_SESSION['loggedin'] == true) {
+    header("Location: ./index.php");
+  }
+?>
+
 <div class="formContainer">
   <h1>Login</h1>
-  <form class="form">
+  <form class="form" action="./assets/login.script.php" method="post">
     <div class="form_username">
       <label for="username">Username</label>
       <input type="text" name="username" placeholder="username">

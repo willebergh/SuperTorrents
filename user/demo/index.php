@@ -1,5 +1,5 @@
 <?php
-  session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -9,6 +9,15 @@
     <title>home</title>
   </head>
   <body>
-    <h1>Welcome home <?php $_SESSION['username']; ?></h1>
+    <?php
+      session_start();
+      echo "
+      ".$_SESSION['loggedin']." </br>
+      ".$_SESSION['username']."
+    "; ?>
+    <?php echo ""; ?>
+    <h1>Welcome home</h1>
+    <a href="./login.php">login</a>
+    <a href="./logout.php">logout</a>
   </body>
 </html>
