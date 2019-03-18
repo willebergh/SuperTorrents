@@ -6,7 +6,7 @@
   if (isset($_GET)) {
     $search_query = $_GET['search'];
   }
-  
+
   $sql = "SELECT * FROM torrents WHERE title LIKE '%$search_query%' OR uploader LIKE '%$search_query%'";
 
   echo "
