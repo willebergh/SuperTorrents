@@ -35,6 +35,7 @@
   // If the passwords do not match, set variable to invalid
   if ($password == $password_repeat) {
     $check_password = "valid";
+    $hashed_password = password_hash("$password", PASSWORD_DEFAULT);
   } else {
     $check_password = "invalid";
   }
@@ -42,7 +43,7 @@
   //Checks if both user and email are ok
   // If they are ok, insert into the database
   $sql_insert = "INSERT INTO users (username, email, password)
-    VALUES ('$username', '$email', '$password')";
+    VALUES ('$username', '$email', '$hashed_password')";
 
   if ($check_username == "valid" && $check_email == "valid" && $check_password == "valid") {
     mysqli_query($conn, $sql_insert);

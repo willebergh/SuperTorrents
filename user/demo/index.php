@@ -1,5 +1,18 @@
 <?php
-
+  session_start();
+  if (empty($_SESSION['authenticated'])) {
+    echo "
+      <h1>not logged in</h1>
+    ";
+  } else if ($_SESSION['authenticated'] == true) {
+    echo "
+      <h1>Welcome home @ ".$_SESSION['username']."</h1>
+      ";
+  } else {
+    echo "
+      <h1>not logged in</h1>
+    ";
+  }
 ?>
 
 <!DOCTYPE html>
@@ -9,14 +22,6 @@
     <title>home</title>
   </head>
   <body>
-    <?php
-      session_start();
-      echo "
-      ".$_SESSION['loggedin']." </br>
-      ".$_SESSION['username']."
-    "; ?>
-    <?php echo ""; ?>
-    <h1>Welcome home</h1>
     <a href="./login.php">login</a>
     <a href="./logout.php">logout</a>
   </body>
