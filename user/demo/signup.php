@@ -1,4 +1,9 @@
 <?php
+  session_start();
+
+  if ($_SESSION['authenticated'] == true) {
+    header("Location: ./index.php");
+  }
   if (!empty($_GET)) {
     $username_error = $_GET['username'];
     $email_error = $_GET['email'];
