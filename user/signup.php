@@ -1,4 +1,5 @@
 <?php
+  include_once "../assets/inc/session_loader.inc.php";
   $page_uuid_css = "user.signup.css";
   include_once "".$_SERVER['DOCUMENT_ROOT']."/supertorrents/assets/inc/pathVar.inc.php";
   include_once($headerINC);

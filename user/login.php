@@ -1,14 +1,5 @@
 <?php
-  session_start();
-  if (empty($_SESSION['authenticated'])) {
-    $loggedIN_content = false;
-  } else if ($_SESSION['authenticated'] == true) {
-    $loggedIN_content = true;
-  } else if ($_SESSION['authenticated'] == false){
-    $loggedIN_content = false;
-  } else {
-    $loggedIN_content = false;
-  }
+  include_once "../assets/inc/session_loader.inc.php";
   $page_uuid_css = "user.login.css";
   include_once "".$_SERVER['DOCUMENT_ROOT']."/supertorrents/assets/inc/pathVar.inc.php";
   include_once($headerINC);
