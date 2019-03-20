@@ -1,5 +1,6 @@
 <?php
-  include_once "./dbh.inc.php";
+  include_once "".$_SERVER['DOCUMENT_ROOT']."/supertorrents/assets/inc/pathVar.inc.php";
+  include_once "../inc/dbh.inc.php";
 
   $username = mysqli_real_escape_string($conn, $_POST['username']);
   $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -7,7 +8,7 @@
   $password_repeat = mysqli_real_escape_string($conn, $_POST['password_repeat']);
 
   if (empty($username) || empty($email) || empty($password) || empty($password_repeat)) {
-    header("Location: ../signup.php?error=noInput");
+    header("Location: $signup_PageURL?error=noInput");
     exit;
   } else {
 
@@ -15,7 +16,7 @@
     $sql_check_username = "SELECT * FROM users WHERE username = ?";
     $stmt_check_username = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt_check_username, $sql_check_username)) {
-      header("Location: ../signup.php");
+      header("Location: $signup_PageURL");
       exit;
     } else {
       mysqli_stmt_bind_param($stmt_check_username, "s", $username);
@@ -59,7 +60,7 @@
         ";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
-          header("Location: ../signup.php");
+          header("Location: $signup_PageURL");
           exit;
         } else {
           mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashed_password);
@@ -69,7 +70,7 @@
           $_SESSION['authenticated'] = true;
           $_SESSION['username'] = $username;
 
-          header("Location: ../index.php?signup=success");
+          header("Location: $home_PageURL?signup=success");
         }
       }
     }

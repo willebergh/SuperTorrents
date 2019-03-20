@@ -28,5 +28,7 @@
   $toplist_PageURL = "$webRoot/browse/toplist.php";
   $categories_PageURL = "$webRoot/browse/categories.php";
   $login_PageURL = "$webRoot/user/login.php";
+  $signup_PageURL = "$webRoot/user/signin.php";
+  $logout_PageURL = "$webRoot/user/logout.php";
   $torrent_PageURL = "$webRoot/torrent/";
   $torrentView_PageURL = "$webRoot/torrent/view.php";

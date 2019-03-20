@@ -2,26 +2,43 @@
   $page_uuid_css = "user.signup.css";
   include_once "".$_SERVER['DOCUMENT_ROOT']."/supertorrents/assets/inc/pathVar.inc.php";
   include_once($headerINC);
+
+  session_start();
+  if ($_SESSION['authenticated'] == true) {
+    header("Location: ./index.php");
+  }
+  if (!empty($_GET)) {
+    $username_error = $_GET['username'];
+    $email_error = $_GET['email'];
+    $password_error = $_GET['password'];
+  } else {
+    $username_error = "";
+    $email_error = "";
+    $password_error = "";
+  }
 ?>
 
 <div class="formContainer">
   <h1>Sign up</h1>
-  <form class="form">
+  <form class="form" action="../assets/script/signup.script.php" method="post">
     <div class="form_username">
       <label for="username">Username</label>
-      <input type="text" name="username" placeholder="username">
+      <?php if ($username_error == "invalid") {echo "<p>username already registered</p>";} ?>
+      <input type="text" name="username" required="required" placeholder="username">
     </div>
     <div class="form_email">
       <label for="email">E-mail</label>
-      <input type="text" name="e-mail" placeholder="e-mail">
+      <?php if ($email_error == "invalid") {echo "<p>email already registered</p>";} ?>
+      <input type="text" name="email" required="required" placeholder="e-mail">
     </div>
     <div class="form_password">
       <label for="passowrd">Password</label>
-      <input type="password" name="password" placeholder="password">
-      <input type="password" name="password_repeat" placeholder="repeat password">
+      <?php if ($password_error == "invalid") {echo "<p>passwords didn't match</p>";} ?>
+      <input type="password" name="password" required="required" placeholder="password">
+      <input type="password" name="password_repeat" required="required" placeholder="repeat password">
     </div>
     <div class="form_button">
-      <button type="submit" name="login_button">Sign up</button>
+      <button type="submit" name="signup_button">Sign up</button>
     </div>
   </form>
 </div>

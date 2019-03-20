@@ -2,11 +2,16 @@
   $page_uuid_css = "user.login.css";
   include_once "".$_SERVER['DOCUMENT_ROOT']."/supertorrents/assets/inc/pathVar.inc.php";
   include_once($headerINC);
+
+  session_start();
+  if ($_SESSION['authenticated'] == true) {
+    header("Location: ./index.php");
+  }
 ?>
 
 <div class="formContainer">
   <h1>Login</h1>
-  <form class="form">
+  <form class="form" action="../assets/script/login.script.php" method="post">
     <div class="form_username">
       <label for="username">Username</label>
       <input type="text" name="username" placeholder="username">
