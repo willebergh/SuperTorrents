@@ -72,5 +72,7 @@
 
           header("Location: $home_PageURL?signup=success");
         }
+      } else {
+        header("Location: $signup_PageURL?username=$check_username&email=$check_email");
       }
     }
