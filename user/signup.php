@@ -30,12 +30,13 @@
     </div>
     <div class="form_password">
       <label for="passowrd">Password</label>
-      <?php if ($password_error == "invalid") {echo "<p>passwords didn't match</p>";} ?>
+      <?php if ($password_error == "no_match") {echo "<p>passwords didn't match</p>";}
+        else if ($password_error == "hash_error") {echo "<p>something went wrong, please try again</p>";} ?>
       <input type="password" name="password" required="required" placeholder="password">
       <input type="password" name="password_repeat" required="required" placeholder="repeat password">
     </div>
     <div class="form_button">
-      <button type="submit" name="signup_button">Sign up</button>
+      <button type="submit" name="signup_button">Signup</button>
     </div>
   </form>
 </div>

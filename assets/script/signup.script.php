@@ -49,11 +49,16 @@
         }
       }
 
-      if ($hashed_password = password_hash($password, PASSWORD_DEFAULT)) {
-        $check_password = "ok";
+      if ($password == $password_repeat) {
+        if ($hashed_password = password_hash($password, PASSWORD_DEFAULT)) {
+          $check_password = "ok";
+        } else {
+          $check_password = "hash_error";
+        }
       } else {
-        $check_password = "error";
+        $check_password = "no_match";
       }
+
       if ($check_username == "ok" && $check_email == "ok" && $check_password == "ok") {
         $sql = "INSERT INTO users (username, email, password)
           VALUES (?, ?, ?)
@@ -73,6 +78,6 @@
           header("Location: $home_PageURL?signup=success");
         }
       } else {
-        header("Location: $signup_PageURL?username=$check_username&email=$check_email");
+        header("Location: $signup_PageURL?username=$check_username&email=$check_email&password=$check_password");
       }
     }
