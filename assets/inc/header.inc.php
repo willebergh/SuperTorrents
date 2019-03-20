@@ -1,13 +1,3 @@
-<?php
-  session_start();
-  if (empty($_SESSION['authenticated'])) {
-    $loggedIN_content = false;
-  } else if ($_SESSION['authenticated'] == true) {
-    $loggedIN_content = true;
-  } else {
-    $loggedIN_content = false;
-  }
-?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -104,16 +94,16 @@
           <?php
             if ($loggedIN_content == true) {
               echo "
-              <a href=\"$login_PageURL\" class=\"mobile-bottom-nav-item login\">
-                <span class=\"mobile-bottom-nav-item-icon fas fa-user\"></span>
-                <span class=\"mobile-bottom-nav-item-text\">Login</span>
+              <a href=\"$logout_PageURL\" class=\"mobile-bottom-nav-item login\">
+                <span class=\"mobile-bottom-nav-item-icon fas fa-sign-out-alt\"></span>
+                <span class=\"mobile-bottom-nav-item-text\">Logout</span>
               </a>
               ";
             } else {
               echo "
               <a href=\"$login_PageURL\" class=\"mobile-bottom-nav-item login\">
-                <span class=\"mobile-bottom-nav-item-icon fas fa-sign-out-alt\"></span>
-                <span class=\"mobile-bottom-nav-item-text\">Logout</span>
+                <span class=\"mobile-bottom-nav-item-icon fas fa-user\"></span>
+                <span class=\"mobile-bottom-nav-item-text\">Login</span>
               </a>
               ";
             }
