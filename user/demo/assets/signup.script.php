@@ -6,49 +6,70 @@
   $password = mysqli_real_escape_string($conn, $_POST['password']);
   $password_repeat = mysqli_real_escape_string($conn, $_POST['password_repeat']);
 
-  // Checks if the username is already registered
-  // If the username is registered, echo error message and set variable to invalid
-  // If the username is not registered set variable to valid
-  $sql_check_username = "SELECT * FROM users WHERE username = '$username'";
-  $result_check_username = mysqli_query($conn, $sql_check_username);
-
-  if ($result_check_username->num_rows > 0) {
-    $check_username = "invalid";
+  if (empty($username) || empty($email) || empty($password) || empty($password_repeat)) {
+    header("Location: ../signup.php?error=noInput");
+    exit;
   } else {
-    $check_username = "valid";
-  }
 
-  // Checks if the email is already registered
-  // If the email is registered, echo error message and set variable to invalid
-  // If the email is not registered set variable to valid
-  $sql_check_email = "SELECT * FROM users WHERE email = '$email'";
-  $result_check_email = mysqli_query($conn, $sql_check_email);
+    // Checks if username is taken or not
+    $sql_check_username = "SELECT * FROM users WHERE username = ?";
+    $stmt_check_username = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt_check_username, $sql_check_username)) {
+      header("Location: ../signup.php");
+      exit;
+    } else {
+      mysqli_stmt_bind_param($stmt_check_username, "s", $username);
+      mysqli_stmt_execute($stmt_check_username);
+      $result_check_username = mysqli_stmt_get_result($stmt_check_username);
+      $row_check_username = mysqli_fetch_assoc($result_check_username);
+      if ($username == $row_check_username['username']) {
+        $check_username = "taken";
+      } else {
+        $check_username = "ok";
+      }
+    }
 
-  if ($result_check_email->num_rows > 0) {
-    $check_email = "invalid";
-  } else {
-    $check_email = "valid";
-  }
 
-  // Checks if the two password fields match each other
-  // If the passwords match, set variable to valid
-  // If the passwords do not match, set variable to invalid
-  if ($password == $password_repeat) {
-    $check_password = "valid";
-    $hashed_password = password_hash("$password", PASSWORD_DEFAULT);
-  } else {
-    $check_password = "invalid";
-  }
+      // Checks if email is taken or not
+      $sql_check_email = "SELECT * FROM users WHERE email = ?";
+      $stmt_check_email = mysqli_stmt_init($conn);
+      if (!mysqli_stmt_prepare($stmt_check_email, $sql_check_email)) {
+        header("Location: ../signup.php");
+        exit;
+      } else {
+        mysqli_stmt_bind_param($stmt_check_email, "s", $email);
+        mysqli_stmt_execute($stmt_check_email);
+        $result_check_email = mysqli_stmt_get_result($stmt_check_email);
+        $row_check_email = mysqli_fetch_assoc($result_check_email);
+        if ($email == $row_check_email['email']) {
+          $check_email = "taken";
+        } else {
+          $check_email = "ok";
+        }
+      }
 
-  //Checks if both user and email are ok
-  // If they are ok, insert into the database
-  $sql_insert = "INSERT INTO users (username, email, password)
-    VALUES ('$username', '$email', '$hashed_password')";
+      if ($hashed_password = password_hash($password, PASSWORD_DEFAULT)) {
+        $check_password = "ok";
+      } else {
+        $check_password = "error";
+      }
+      if ($check_username == "ok" && $check_email == "ok" && $check_password == "ok") {
+        $sql = "INSERT INTO users (username, email, password)
+          VALUES (?, ?, ?)
+        ";
+        $stmt = mysqli_stmt_init($conn);
+        if (!mysqli_stmt_prepare($stmt, $sql)) {
+          header("Location: ../signup.php");
+          exit;
+        } else {
+          mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashed_password);
+          mysqli_stmt_execute($stmt);
 
-  if ($check_username == "valid" && $check_email == "valid" && $check_password == "valid") {
-    mysqli_query($conn, $sql_insert);
-    header("Location: ../index.php");
-  } else {
-    header("Location: ../signup.php?username=$check_username&email=$check_email&password=$check_password");
-  }
-?>
+          session_start();
+          $_SESSION['authenticated'] = true;
+          $_SESSION['username'] = $username;
+
+          header("Location: ../index.php?signup=success");
+        }
+      }
+    }
