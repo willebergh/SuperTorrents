@@ -16,10 +16,11 @@
 
     </div>
 
-<?php
-  $sql = "SELECT uuid, category, title, size, date, uploader, seeders, leechers FROM torrents WHERE uploader = '$user'  ORDER BY date DESC";
-  include_once($browseTorrent_tableINC);
-?>
+    <?php
+    $sql = "SELECT * FROM torrents WHERE uploader = '$user'  ORDER BY date DESC";
+    include_once($browseTorrent_tableINC);
+    ?>
+
 
   </main>
 
