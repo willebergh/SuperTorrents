@@ -87,6 +87,10 @@
   padding: 4px 6px 6px;
   background-color: #0d5982;
   word-wrap: break-word;
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .torrentViewer_title h1 {
   font-size: 18px;
