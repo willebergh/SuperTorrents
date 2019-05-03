@@ -1,6 +1,6 @@
 <?php
   include_once "../assets/inc/session_loader.inc.php";
-  include_once "".$_SERVER['DOCUMENT_ROOT']."/supertorrents/assets/inc/pathVar.inc.php";
+  include_once "".$_SERVER['DOCUMENT_ROOT']."/assets/inc/pathVar.inc.php";
   include_once($headerINC);
   include_once($dbhINC);
 

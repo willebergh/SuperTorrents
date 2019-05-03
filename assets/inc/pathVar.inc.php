@@ -1,6 +1,6 @@
 <?php
   $serverRoot = $_SERVER['DOCUMENT_ROOT'];
-  $projectRoot = "/supertorrents";
+  $projectRoot = "";
   $globalRoot = "$serverRoot$projectRoot";
   $webRoot = "$projectRoot";
 
