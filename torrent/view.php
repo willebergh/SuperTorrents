@@ -21,6 +21,7 @@
       <div class=\"torrentViewer\">
         <div class=\"torrentViewer_title\">
           <h1>".$row["title"]."</h1>
+          <a href=\"#\"><h1>Download</h1></a>
         </div>
         <div class=\"torrentViewer_info torrentViewer_info_left\">
           <div class=\"torrentViewer_info_item\">

@@ -54,8 +54,12 @@
             <li class=\"currentPage_movies headerNav_liMovies\"><a href=\"$categories_PageURL?a=movies\">Movies</a></li>
             <li class=\"currentPage_tv-shows headerNav_liTVShows\"><a href=\"$categories_PageURL?a=tv-shows\">Tv-shows</a></li>
             <li class=\"headerNav_liSpacer\">|</li>
-            <li class=\"currentPage_login headerNav_liLogin\"><a href=\"$login_PageURL\">Login</a></li>
             ";
+            if ($loggedIN_content == true) {
+              echo "<li class=\"currentPage_login headerNav_liLogin\"><a href=\"$logout_PageURL\">Logout</a></li>";
+            } else {
+              echo "<li class=\"currentPage_login headerNav_liLogin\"><a href=\"$login_PageURL\">Login</a></li>";
+            }
           ?>
         </ul>
       </div>

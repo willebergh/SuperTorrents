@@ -154,7 +154,7 @@
   }
   .navWrapper {
     display: block;
-    width: 507px;
+    width: auto;
     height: 38px;
     margin: 9px auto 0;
     position: absolute;
